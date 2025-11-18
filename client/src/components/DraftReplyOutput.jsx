@@ -10,7 +10,7 @@ export default function DraftReplyOutput({ reply, loading }) {
           <CardTitle className="text-white text-xl">Drafted Reply</CardTitle>
         </CardHeader>
         <CardContent>
-          <Loader />   {/* spinner */}
+          <Loader /> 
           <div className="text-center text-white/70 mt-2">
             Drafting reply...
           </div>

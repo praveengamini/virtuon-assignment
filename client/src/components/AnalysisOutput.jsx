@@ -4,7 +4,7 @@ import JsonPretty from "../utils/JsonPretty";
 
 export default function AnalysisOutput({ analysis, loading }) {
 
-  const [view, setView] = useState("pretty"); // "pretty" | "json"
+  const [view, setView] = useState("pretty"); 
 
   if (loading) {
     return (
@@ -26,7 +26,6 @@ export default function AnalysisOutput({ analysis, loading }) {
 
       <CardContent>
 
-        {/* Toggle Buttons */}
         <div className="flex gap-3 mb-4">
           <button
             onClick={() => setView("pretty")}
@@ -43,10 +42,8 @@ export default function AnalysisOutput({ analysis, loading }) {
           </button>
         </div>
 
-        {/* Pretty JSON */}
         {view === "pretty" && <JsonPretty data={JSON.parse(analysis)} />}
 
-        {/* Raw JSON */}
         {view === "json" && (
           <pre className="bg-black text-white border border-white/20 p-4 rounded-lg overflow-auto max-h-96 whitespace-pre-wrap">
             {analysis}
