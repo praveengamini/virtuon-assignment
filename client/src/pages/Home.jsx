@@ -32,15 +32,16 @@ export default function Home() {
         onAnalyze={onAnalyze}
       />
 
-      <AnalysisOutput analysis={analysis} loading={loadingAnalyze} />
+    <AnalysisOutput analysis={analysis} loading={loadingAnalyze} />
 
-      <ContractFormCard
-        snippet={contract}
-        setSnippet={setContract}
-        onDraft={onDraft}
-      />
+    <ContractFormCard
+      snippet={contract}
+      setSnippet={setContract}
+      onDraft={onDraft}
+    />
 
-      <DraftReplyOutput reply={reply} loading={loadingDraft} />
+    <DraftReplyOutput reply={reply} loading={loadingDraft} />
+
     </div>
   );
 }

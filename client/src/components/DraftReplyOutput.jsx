@@ -6,8 +6,14 @@ export default function DraftReplyOutput({ reply, loading }) {
   if (loading) {
     return (
       <Card className="bg-black border border-white/20">
+        <CardHeader>
+          <CardTitle className="text-white text-xl">Drafted Reply</CardTitle>
+        </CardHeader>
         <CardContent>
-          <div className="text-center text-white py-6">Drafting reply...</div>
+          <Loader />   {/* spinner */}
+          <div className="text-center text-white/70 mt-2">
+            Drafting reply...
+          </div>
         </CardContent>
       </Card>
     );
@@ -20,7 +26,6 @@ export default function DraftReplyOutput({ reply, loading }) {
       <CardHeader>
         <CardTitle className="text-white text-xl">Drafted Reply</CardTitle>
       </CardHeader>
-
       <CardContent>
         <pre className="bg-black text-white border border-white/20 p-4 rounded-lg overflow-auto whitespace-pre-wrap max-h-96">
           {reply}

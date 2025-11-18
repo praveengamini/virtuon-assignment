@@ -10,6 +10,7 @@ export default function useEmailAssistant() {
 
   const runAnalysis = async (subject, body) => {
     setLoadingAnalyze(true);
+    setReply(""); // CLEAR OLD REPLY
     try {
       const emailText = `Subject: ${subject}\n\n${body}`;
       const res = await analyzeEmail(emailText);
@@ -37,6 +38,6 @@ export default function useEmailAssistant() {
     runAnalysis,
     runDraft,
     loadingAnalyze,
-    loadingDraft
+    loadingDraft,   // ← IMPORTANT
   };
 }
